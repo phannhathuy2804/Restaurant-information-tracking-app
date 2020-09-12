@@ -1,0 +1,7 @@
+
+<!-- 1st iteration-->
+
+1. Product Owner(PO): Kodai Hiraishi(Kodai)
+2. Scrum Master(SM): Nhat huy Phan(James)
+3. Repo Manager(RM): Justin Gregg(Justin)
+4. Team Member(TM): Ching Hang Lam(Richard)

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="restaurant"
+            type="com.example.cmpt276project.model.Restaurant" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/item_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="1dp"
+        android:orientation="horizontal"
+        android:setHazardColor="@{restaurant}">
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:adjustViewBounds="false"
+            android:contentDescription="@string/todo"
+            android:cropToPadding="false"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/restraunt_icon"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/restaurant_list_activity_name"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/item_restaurant_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/item_name"
+                android:layout_toRightOf="@id/item_name"
+                android:padding="5dp"
+                android:text="@{restaurant.name}"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/item_issues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_restaurant_name"
+                android:padding="5dp"
+                android:text="@string/restaurant_list_activity_total_number_of_issues"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/item_total_issues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_restaurant_name"
+                android:layout_toEndOf="@id/item_issues"
+                android:layout_toRightOf="@id/item_issues"
+                android:padding="5dp"
+                android:text="@{String.valueOf(restaurant.totalNumIssues)}"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/item_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_restaurant_name"
+                android:layout_toEndOf="@id/item_total_issues"
+                android:layout_toRightOf="@id/item_total_issues"
+                android:padding="5dp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/item_inspection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_total_issues"
+                android:padding="5dp"
+                android:text="@string/restaurant_list_activity_last_inspection"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/item_last_inspection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_total_issues"
+                android:layout_toEndOf="@id/item_inspection"
+                android:layout_toRightOf="@id/item_inspection"
+                android:padding="5dp"
+                android:showLastInspectionDate="@{restaurant.lastInspectionDate}"
+                android:textSize="12sp" />
+
+            <ImageButton
+                android:id="@+id/favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_action_name"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

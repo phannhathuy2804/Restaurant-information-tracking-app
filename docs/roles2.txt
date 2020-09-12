@@ -1,0 +1,4 @@
+1. Product Owner(PO): Nhat huy Phan(James)
+2. Scrum Master(SM): Justin Gregg(Justin)
+3. Repo Manager(RM): Ching Hang Lam(Richard)
+4. Team Member(TM): Kodai Hiraishi(Kodai)
